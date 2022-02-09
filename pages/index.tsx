@@ -1,9 +1,13 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
+
 import styles from '../styles/Home.module.css'
 import Navbar from "./components/Navbar"
-import Typography from '@mui/material/Typography';
+import MainBanner from "./components/mainbanner"
+
+import Explore from "./components/explore"
+import Footer from './components/footer'
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>
@@ -13,35 +17,14 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar/>
+      <MainBanner />
+    
+      
+      <Explore />
+      <Footer />
+
      
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          DattaKaka.com
-         {/* <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span> */}
-           
-        </a>
-        <br></br>
-       <center> <Typography
-            variant="p"
-            
-            
-           
-          >
-           
-           response@dattakaka.com
-           <br></br><br></br>
-           © Copyright dattakaka.com. All right reserved.
-           <br></br>
-           This is just an informative website regarding the teachings of Datta Kaka.  
-          </Typography>
-          </center>
-      </footer>
+     
     </div>
   )
 }
