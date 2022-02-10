@@ -17,16 +17,16 @@ export default function MediaCard(props) {
         image={props.imgsrc}
         alt="green iguana"
       />
-          <CardContent>
-    
-   <center>     <Typography variant="h6" color="text.secondary">
-        {props.heading}
+      <CardContent>
+
+        <center><Typography variant="h6" color="text.secondary">
+          {props.heading}
         </Typography></center>
       </CardContent>
-      
-      <CardActions style={{"justifyContent":"center"}}>
-        
-        <Button size="small">{props.btnText}</Button>
+
+      <CardActions style={{ "justifyContent": "center" }}>
+
+        <Button variant="contained" sx={{ background: "black" }} size="small">{props.btnText}</Button>
       </CardActions>
     </Card>
   );
