@@ -17,16 +17,16 @@ export default function ResponsiveGrid() {
     <Box sx={{ flexGrow: 1, bgcolor: "gray", padding: "5%", marginTop: 10 }}>
       <Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm: 8, md: 12 }}>
 
-        <Grid item xs={2} sm={4} md={4} >
+        <Grid item xs={12} sm={4} md={4} >
           <ExploreCards imgsrc="./images/ExplorePage/listen.webp" btnText="Listen" heading="Listen" />
 
 
         </Grid>
-        <Grid item xs={2} sm={4} md={4} >
+        <Grid item xs={12} sm={4} md={4} >
           <ExploreCards imgsrc="./images/ExplorePage/Read.webp" btnText="Read" heading="E-Books to Read" />
 
         </Grid>
-        <Grid item xs={2} sm={4} md={4} >
+        <Grid item xs={12} sm={4} md={4} >
           <ExploreCards imgsrc="./images/ExplorePage/videos.webp" btnText="VIDEOS" heading="View" />
 
 

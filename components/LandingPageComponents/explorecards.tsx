@@ -5,10 +5,15 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { NextPage } from "next";
 
+interface Props {
+  imgsrc: string;
+  btnText: string;
+  heading: string;
+}
 
-
-export default function MediaCard(props) {
+const ExploreCards: NextPage<Props> = (props) => {
   return (
     <Card >
       <CardMedia
@@ -17,11 +22,11 @@ export default function MediaCard(props) {
         image={props.imgsrc}
         alt="green iguana"
       />
-      <CardContent>
+      <CardContent sx={{ justifyContent: "center", display: "flex" }}>
 
-        <center><Typography variant="h6" color="text.secondary">
+        <Typography variant="h6" color="text.secondary">
           {props.heading}
-        </Typography></center>
+        </Typography>
       </CardContent>
 
       <CardActions style={{ "justifyContent": "center" }}>
@@ -31,3 +36,4 @@ export default function MediaCard(props) {
     </Card>
   );
 }
+export default ExploreCards

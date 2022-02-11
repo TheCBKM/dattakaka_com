@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../../../styles/Home.module.css'
+import styles from '../../styles/Home.module.css'
 import Typography from '@mui/material/Typography';
 import Image from 'next/image'
 
@@ -20,20 +20,36 @@ const footer = () => {
 
             </a>
             <br></br>
-            <center> <Typography
-                variant="p"
+            <Typography
+
+
+                className="footer-content"
 
 
 
             >
 
                 response@dattakaka.com
-                <br></br><br></br>
+            </Typography><br></br><br></br>
+            <Typography
+
+                className="footer-content"
+
+
+
+            >
+
                 © Copyright dattakaka.com. All right reserved.
-                <br></br>
+            </Typography><br></br>
+            <Typography
+                className="footer-content"
+
+
+
+            >
                 This is just an informative website regarding the teachings of Datta Kaka.
             </Typography>
-            </center>
+
         </footer>
 
     </div>;

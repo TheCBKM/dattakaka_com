@@ -2,12 +2,12 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 
 import styles from '../styles/Home.module.css'
-import Navbar from "./components/LandingPageComponents/navbar"
-import MainBanner from "./components/LandingPageComponents/mainbanner"
+import Navbar from "../components/LandingPageComponents/navbar"
+import MainBanner from "../components/LandingPageComponents/mainbanner"
 
-import Explore from "./components/LandingPageComponents/explore"
-import Footer from './components/LandingPageComponents/footer'
-import Testimonial from "./components/LandingPageComponents/testimonial"
+import Explore from "../components/LandingPageComponents/explore"
+import Footer from '../components/LandingPageComponents/footer'
+import Testimonial from "../components/LandingPageComponents/testimonial"
 
 const Home: NextPage = () => {
   return (

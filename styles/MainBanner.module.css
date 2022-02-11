@@ -1,0 +1,26 @@
+.mainBannerStyles
+{position: relative}
+.learnMore
+{background:none !important;}
+.cardMedia
+{
+height:100%;
+opacity: 0.8;
+background: transparent
+
+
+
+}
+.siteDetails
+{position: absolute;
+    
+    bottom:0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    color: white;
+    background: none
+
+
+}
