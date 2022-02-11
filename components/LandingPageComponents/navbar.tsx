@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import styles from "../../styles/Navbar.module.css"
+import Link from 'next/link'
 
 const pages = ['Audios', 'Home', 'Videos', 'About', 'Gallery'];
 
@@ -82,11 +83,24 @@ const ResponsiveAppBar = () => {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu} className={styles.typographyColor}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+
+              <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
+                <Typography textAlign="center">Audios</Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
+                <Link href="/"><a>Home</a></Link>
+              </MenuItem>
+
+              <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
+                <Typography textAlign="center">Videos</Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
+                <Typography textAlign="center"><Link href="/about">About</Link></Typography>
+              </MenuItem>
+              <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
+                <Typography textAlign="center">Gallery</Typography>
+              </MenuItem>
+
             </Menu>
           </Box>
           <Typography
@@ -100,22 +114,57 @@ const ResponsiveAppBar = () => {
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
-              >
 
-                {page}
-              </Button>
-            ))}
+            <Button
+
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'black', display: 'block' }}
+            >
+              Audios
+
+            </Button>
+
+
+            <Button
+
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'black', display: 'block' }}
+            >
+              <Link href="/">Home</Link>
+
+            </Button>
+            <Button
+
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'black', display: 'block' }}
+            >
+              Videos
+
+            </Button>
+
+            <Button
+
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'black', display: 'block' }}
+            >
+              <Link href="/about">About</Link>
+
+            </Button>
+            <Button
+
+              onClick={handleCloseNavMenu}
+              sx={{ my: 2, color: 'black', display: 'block' }}
+            >
+              Gallery
+
+            </Button>
+
           </Box>
 
 
         </Toolbar>
       </Container>
-    </AppBar>
+    </AppBar >
   );
 };
 export default ResponsiveAppBar;

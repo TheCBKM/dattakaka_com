@@ -1,0 +1,55 @@
+.mainDisplayCard
+{
+     display: flex;
+    margin-top:50px;
+    margin-bottom:50px;
+      width:80%;
+      margin-left: auto;
+      margin-right: auto;
+      
+     
+
+}
+
+
+.whoWas
+{   margin-top:50px;
+    margin-bottom:50px;
+      width:80%;
+      margin-left: auto;
+      margin-right: auto;
+      padding:5%;
+ 
+
+}
+
+.DOB
+{font-weight: bold;}
+.DOB::before
+{  content: "\a  ";
+  white-space: pre;}
+.lineBreak::after
+{
+  content: "\a \a ";
+    white-space: pre;
+}
+
+
+    .image
+    {width:50% !important}
+    .textBox
+    {width:50% !important}
+  
+  @media only screen and (max-width: 850px) {
+    .mainDisplayCard
+    {
+        flex-direction: column;
+          
+         
+    
+    }
+    .image
+    {width:100% !important}
+    .textBox
+    {width:100% !important}
+  }

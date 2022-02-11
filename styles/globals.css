@@ -17,7 +17,7 @@ a {
 }
 
 
-
+/* footer */
 .footer-content
 {display:flex;
 justify-content: center;
@@ -37,4 +37,10 @@ justify-content: center;
     padding:2px
   }
 }
+/* footer */
+.about-us-main
+{
+   background: grey;
+    padding: 50px; 
 
+}
