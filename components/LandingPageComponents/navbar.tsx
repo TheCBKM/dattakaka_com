@@ -85,7 +85,7 @@ const ResponsiveAppBar = () => {
             >
 
               <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
-                <Typography textAlign="center">Audios</Typography>
+                <Typography textAlign="center"><Link href="/about">Audios</Link></Typography>
               </MenuItem>
               <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
                 <Link href="/"><a>Home</a></Link>
@@ -120,7 +120,8 @@ const ResponsiveAppBar = () => {
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'black', display: 'block' }}
             >
-              Audios
+              <Link href="/audio"><a>Audios</a></Link>
+
 
             </Button>
 
