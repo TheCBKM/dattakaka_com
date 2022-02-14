@@ -82,7 +82,7 @@ export default function MediaControlCard() {
             </Box >
 
             <Box style={showepisodes ? { "display": "block" } : { "display": "none" }}>
-                {currentSeriesData.map((row) => (< Audioepisodes rowData={row} />
+                {currentSeriesData.map((row) => (< Audioepisodes rowData={row} key={row.id} />
                 ))}
             </Box>
         </>
