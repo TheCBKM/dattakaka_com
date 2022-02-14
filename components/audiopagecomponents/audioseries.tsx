@@ -44,7 +44,7 @@ export default function MediaControlCard() {
                     SampleCollection1.audioSeries.map((row
                     ) => (
                         <Card sx={{ display: 'flex' }} className={styles.audioCardMain} key={row.id}>
-                            <AudioIcon />
+
                             <CardMedia
                                 component="img"
                                 sx={{ width: 151 }}
@@ -52,7 +52,7 @@ export default function MediaControlCard() {
                                 alt="Live from space album cover"
                                 className={styles.imageSection}
                             />
-                            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+                            <Box sx={{ display: 'flex', flexDirection: 'column' }} >
                                 <CardContent sx={{ flex: '1 0 auto' }}>
                                     <Typography component="div" variant="h5">
                                         {row.name}
@@ -82,7 +82,7 @@ export default function MediaControlCard() {
             </Box >
 
             <Box style={showepisodes ? { "display": "block" } : { "display": "none" }}>
-                {currentSeriesData.map((row) => (< Audioepisodes rowData={row} key={row.id} />
+                {currentSeriesData.map((row) => (< Audioepisodes rowData={row} />
                 ))}
             </Box>
         </>

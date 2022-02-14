@@ -34,33 +34,22 @@ interface Props {
 const MediaCards: NextPage<Props> = (props: Props) => {
   const theme = useTheme();
   const [play, setPlay] = React.useState(true)
-  const [audioType, setAudioType] = React.useState("")
-
-
-  React.useEffect(() => {
-    setAudioType("audio/" + props.rowData.audio.split(".")[1])
-
-  }, []);
-
 
   return (
     <div>
 
-      <Card sx={{ display: 'flex' }} className={styles.audioCardMain}>
-        <audio id="myAudio">
-          <source src={props.rowData.audio} type={audioType} />
+      <Card sx={{ display: 'flex' }} className={styles.audiosSeriesCardMain} >
 
-
-        </audio>
 
         <CardMedia
           component="img"
           sx={{ width: 151 }}
           image={props.rowData.image}
           alt="Live from space album cover"
+          className={styles.audiosSeriesCardImage}
         />
 
-        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+        <Box sx={{ display: 'flex', flexDirection: 'column' }} className={styles.audioControlsMain}>
           <CardContent sx={{ flex: '1 0 auto' }}>
             <Typography component="div" variant="h5">
               {props.rowData.name}
@@ -80,6 +69,7 @@ const MediaCards: NextPage<Props> = (props: Props) => {
             }*/}
             <ReactAudioPlayer
               src={props.rowData.audio}
+              className={styles.audioPlayer}
 
               controls
             />
