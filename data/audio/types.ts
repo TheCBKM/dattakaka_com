@@ -33,5 +33,7 @@ export interface AudioEpisode {
   audioCollectionId: string;
 }
 
-const FeaturedAudioCollection: string[] = ["1"];
-const FeaturedAudioSeries: string[] = ["1", "2"];
+export const FeaturedAudioCollection: string[] = ["1"];
+export const FeaturedAudioSeries: string[] = ["1", "2"];
+
+export const allCollection: string[] = ["1", "2"];
