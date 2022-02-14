@@ -12,6 +12,7 @@ import Button from '@mui/material/Button';
 import CardActions from '@mui/material/CardActions';
 import AudioIcon from "./Icons/audioicon"
 import Audioepisodes from "./audiocard"
+import { AudioSeries } from "../../data/audio/types"
 
 import PlayArrowIcon from "./Icons/pauseicon";
 export interface rowData {
@@ -40,7 +41,7 @@ export default function MediaControlCard() {
         <>
             <Box style={showseriesComponent ? { "display": "block" } : { "display": "none" }}>
                 {
-                    SampleCollection1.audioSeries.map((row: any) => (
+                    SampleCollection1.audioSeries.map((row) => (
                         <Card sx={{ display: 'flex' }} className={styles.audioCardMain}>
                             <AudioIcon />
                             <CardMedia

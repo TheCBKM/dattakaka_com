@@ -10,24 +10,29 @@ import styles from "../../styles/audio.module.css"
 import { SampleCollection1 } from "../../data/audio/sample"
 import { NextPage } from "next";
 import PauseIcon from "./Icons/pauseicon"
+import ReactAudioPlayer from 'react-audio-player';
+
+
 
 
 import PlayIcon from "./Icons/playicon";
 interface Props {
-  id: string,
-  name: string,
-  description: string,
-  image:
-  string,
-  audio: string,
-  language: string,
-  keywords: Array<string>,
-  audioSeriesId: string,
-  audioCollectionId: string,
+  rowData: {
+    id: string,
+    name: string,
+    description: string,
+    image:
+    string,
+    audio: string,
+    language: string,
+    keywords: Array<string>,
+    audioSeriesId: string,
+    audioCollectionId: string,
+  }
 }
 
 
-const MediaCards: NextPage<Props> = (props) => {
+const MediaCards: NextPage<Props> = (props: Props) => {
   const theme = useTheme();
   const [play, setPlay] = React.useState(true)
   const [audioType, setAudioType] = React.useState("")
@@ -37,21 +42,7 @@ const MediaCards: NextPage<Props> = (props) => {
     setAudioType("audio/" + props.rowData.audio.split(".")[1])
 
   }, []);
-  function playSound(): void {
-    var audioToPlay = document.getElementById("myAudio")
-    audioToPlay.play();
 
-    setPlay(false)
-
-  }
-  function pauseSound(): void {
-    var audioToPlay = document.getElementById("myAudio")
-    audioToPlay.pause();
-
-
-    setPlay(true)
-
-  }
 
   return (
     <div>
@@ -62,6 +53,7 @@ const MediaCards: NextPage<Props> = (props) => {
 
 
         </audio>
+
         <CardMedia
           component="img"
           sx={{ width: 151 }}
@@ -80,13 +72,18 @@ const MediaCards: NextPage<Props> = (props) => {
             </Typography>
           </CardContent>
           <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-            {play ? <IconButton aria-label="previous" onClick={playSound}>
+            {/*{play ? <IconButton aria-label="previous" onClick={playSound}>
               <PlayIcon />
             </IconButton> :
               <IconButton aria-label="previous" onClick={pauseSound}>
                 <PauseIcon />
               </IconButton>
-            }
+            }*/}
+            <ReactAudioPlayer
+              src={props.rowData.audio}
+
+              controls
+            />
 
 
           </Box>
