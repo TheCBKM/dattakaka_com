@@ -9,13 +9,12 @@ import Typography from '@mui/material/Typography';
 import styles from "../../styles/audio.module.css"
 import { SampleCollection1 } from "../../data/audio/sample"
 import { NextPage } from "next";
-import PauseIcon from "./Icons/pauseicon"
+
 import ReactAudioPlayer from 'react-audio-player';
 
 
 
 
-import PlayIcon from "./Icons/playicon";
 interface Props {
   rowData: {
     id: string,

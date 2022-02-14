@@ -31,7 +31,7 @@ export interface rowData {
 export default function MediaControlCard() {
     const theme = useTheme();
     const [showseriesComponent, setshowSeriesComponent] = React.useState(true)
-    const [currentSeriesData, setcurrentSeriesData] = React.useState([])
+    const [currentSeriesData, setcurrentSeriesData] = React.useState<rowData[]>([])
     const [showepisodes, setshowEpisodes] = React.useState(false)
     function currentRowData(e: any): void {
         console.log(e)
@@ -41,8 +41,9 @@ export default function MediaControlCard() {
         <>
             <Box style={showseriesComponent ? { "display": "block" } : { "display": "none" }}>
                 {
-                    SampleCollection1.audioSeries.map((row) => (
-                        <Card sx={{ display: 'flex' }} className={styles.audioCardMain}>
+                    SampleCollection1.audioSeries.map((row
+                    ) => (
+                        <Card sx={{ display: 'flex' }} className={styles.audioCardMain} key={row.id}>
                             <AudioIcon />
                             <CardMedia
                                 component="img"
@@ -81,7 +82,7 @@ export default function MediaControlCard() {
             </Box >
 
             <Box style={showepisodes ? { "display": "block" } : { "display": "none" }}>
-                {currentSeriesData.map((row) => (< Audioepisodes rowData={row} />
+                {currentSeriesData.map((row) => (< Audioepisodes rowData={row} key={row.id} />
                 ))}
             </Box>
         </>
