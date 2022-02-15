@@ -15,18 +15,8 @@ import { AudioEpisodeComponent } from "../../data/audio/types"
 export default function CheckboxListSecondary(props: AudioEpisodeComponent) {
     const [checked, setChecked] = React.useState([1]);
 
-    const handleToggle = (value: number) => () => {
-        const currentIndex = checked.indexOf(value);
-        const newChecked = [...checked];
 
-        if (currentIndex === -1) {
-            newChecked.push(value);
-        } else {
-            newChecked.splice(currentIndex, 1);
-        }
 
-        setChecked(newChecked);
-    };
 
     return (
         <List className={styles.audiPlayerMainBox} sx={{ width: '100%', bgcolor: 'background.paper' }} >
