@@ -26,34 +26,13 @@ export default function MediaControlCard() {
     return (
         <>
             <Box className={styles.mainAudiPageBox} >
-                <Box className={styles.mainCollectionBox}>
-                    <Card >
-                        <CardMedia
-                            component="img"
-                            alt="Series Image"
-                            height="500"
 
-                            image={SampleCollection1.image}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                {SampleCollection1.name}
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {SampleCollection1.description}
-                            </Typography>
-                        </CardContent>
-                        <CardActions>
-
-                        </CardActions>
-                    </Card>
-                </Box>
 
                 {SampleCollection1.audioSeries.map((row) => {
                     return (<Card className={styles.audioSeriesCard} key={row.id} >
                         <CardMedia
                             component="img"
-                            alt="green iguana"
+                            alt="Series Image"
                             height="300"
                             image={row.image}
                         />
