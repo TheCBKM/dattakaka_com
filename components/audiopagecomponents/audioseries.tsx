@@ -13,78 +13,63 @@ import CardActions from '@mui/material/CardActions';
 import AudioIcon from "./Icons/audioicon"
 import Audioepisodes from "./audiocard"
 import { AudioSeries } from "../../data/audio/types"
+import AudioList from "./audiolist"
+import { AudioEpisode } from "../../data/audio/types"
 
-import PlayArrowIcon from "./Icons/pauseicon";
-export interface rowData {
-    id: string,
-    name: string,
-    description: string,
-    image:
-    string,
-    audio: string,
-    language: string,
-    keywords: Array<string>,
-    audioSeriesId: string,
-    audioCollectionId: string,
-}
 
 export default function MediaControlCard() {
-    const theme = useTheme();
-    const [showseriesComponent, setshowSeriesComponent] = React.useState(true)
-    const [currentSeriesData, setcurrentSeriesData] = React.useState<rowData[]>([])
-    const [showepisodes, setshowEpisodes] = React.useState(false)
-    function currentRowData(e: any): void {
-        console.log(e)
-    }
 
     return (
         <>
-            <Box style={showseriesComponent ? { "display": "block" } : { "display": "none" }}>
-                {
-                    SampleCollection1.audioSeries.map((row
-                    ) => (
-                        <Card sx={{ display: 'flex' }} className={styles.audioCardMain} key={row.id}>
+            <Box className={styles.mainAudiPageBox} >
+                <Box className={styles.mainCollectionBox}>
+                    <Card >
+                        <CardMedia
+                            component="img"
+                            alt="green iguana"
+                            height="500"
 
-                            <CardMedia
-                                component="img"
-                                sx={{ width: 151 }}
-                                image={row.image}
-                                alt="Live from space album cover"
-                                className={styles.imageSection}
-                            />
-                            <Box sx={{ display: 'flex', flexDirection: 'column' }} >
-                                <CardContent sx={{ flex: '1 0 auto' }}>
-                                    <Typography component="div" variant="h5">
-                                        {row.name}
-                                    </Typography>
-                                    <Typography variant="subtitle1" color="text.secondary" component="div">
-                                        {row.description}
-                                    </Typography>
-                                    <Typography variant="subtitle1" color="text.secondary" component="div">
-                                        This is the Sample data of the audio series imported from the data folder
-                                    </Typography>
-                                    <CardActions>
-                                        <Button variant="contained" size="large" className={styles.listenBtn} onClick={(event) => {
-                                            console.log(row.episodes)
-                                            setshowEpisodes(true)
-                                            setcurrentSeriesData(row.episodes)
-                                            setshowSeriesComponent(false)
-                                        }}>Listen<img className={styles.musicIcon} src="./images/music.svg"></img></Button>
+                            image={SampleCollection1.image}
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                {SampleCollection1.name}
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {SampleCollection1.description}
+                            </Typography>
+                        </CardContent>
+                        <CardActions>
 
-                                    </CardActions>
-                                </CardContent>
+                        </CardActions>
+                    </Card>
+                </Box>
 
-                            </Box>
+                {SampleCollection1.audioSeries.map((row) => {
+                    return (<Card className={styles.audioSeriesCard} key={row.id} >
+                        <CardMedia
+                            component="img"
+                            alt="green iguana"
+                            height="300"
+                            image={row.image}
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div">
+                                {row.name}
 
-                        </Card>
-                    ))
-                }
+                            </Typography>
+                            <Typography variant="body2" color="text.secondary">
+                                {row.description}
+                            </Typography>
+                        </CardContent>
+                        <CardActions className={styles.playList} >
+                            <AudioList audioList={row.episodes} />
+                        </CardActions>
+                    </Card>)
+                })}
             </Box >
 
-            <Box style={showepisodes ? { "display": "block" } : { "display": "none" }}>
-                {currentSeriesData.map((row) => (< Audioepisodes rowData={row} key={row.id} />
-                ))}
-            </Box>
+
         </>
     );
 }

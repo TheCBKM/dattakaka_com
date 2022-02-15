@@ -38,36 +38,47 @@ margin-left:5px}
 .mainBoxAudioSeries
 {flex-direction: column;}
 
+.audioPlayer
+{width: 220px;
+  height: 35px;
+  
+  margin-left: auto;
+}
 
-/* Responsiveness for the audioplayer */
-@media only screen and (max-width: 1165px) {
-    .audiosSeriesCardMain {
-        margin:50px 30% 50px 30%;
-    }
+.mainAudiPageBox
+{background: black;
+  
+  width: 100%;
+  padding: 0 0 50px 0; }
+
+
+  .audioSeriesCard
+  { margin: 0 10% 50px 10%; 
+
+  }
+
+  .mainCollectionBox
+  {padding:50px 20% 50px 20%}
+  .playList
+  {
+  justify-content: center
+  }
+ 
+  .audiPlayerMainBox
+  {max-width: 650px}
+  @media only screen and (max-width: 700px) {
+    .audioSeriesandaudioPlayer
+    {flex-direction: column !important;}
+    .audioPlayer
+{ 
+  margin-left: 0;
+}
+.audiPlayerMainBox
+  {max-width: 100%}
    
-    
   }
   
-  @media only screen and (max-width: 850px) {
-    .audiosSeriesCardMain {
-        margin:50px 25% 50px 25%;
-    }
-   
-  }
 
-  @media only screen and (max-width: 750px) {
-    .audiosSeriesCardMain {
-        margin:50px 20% 50px 20%;
-    }
-   
-  }
-
-  @media only screen and (max-width: 550px) {
-    .audiosSeriesCardMain {
-        margin:50px 10% 50px 10%;
-    }
-   
-  }
 /* Responsiveness for the audioplayer */ 
 
 

@@ -11,6 +11,7 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@material-ui/icons": "^4.11.2",
+    "@material-ui/utils": "^4.11.2",
     "@mui/material": "^5.4.1",
     "@mui/styled-engine-sc": "^5.4.1",
     "mdbreact": "^5.2.0",

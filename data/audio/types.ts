@@ -33,6 +33,20 @@ export interface AudioEpisode {
   audioCollectionId: string;
 }
 
+export interface AudioEpisodeComponent {
+  audioList:[  
+{  id: string;
+  name: string;
+  description: string;
+  image: string;
+  audio: string;
+  language: language;
+  keywords: string[];
+  audioSeriesId: string;
+  audioCollectionId: string;}]
+}
+
+
 export const FeaturedAudioCollection: string[] = ["1"];
 export const FeaturedAudioSeries: string[] = ["1", "2"];
 
