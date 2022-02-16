@@ -19,7 +19,7 @@ import CardActions from '@mui/material/CardActions';
 
 
 
-export default function MediaControlCard() {
+export default function AudioCollectionIdSearch() {
     const [checked, setChecked] = React.useState([1]);
 
 

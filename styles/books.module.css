@@ -1,0 +1,21 @@
+.booksMainDiv
+{margin:50px auto 50px auto;
+width: 70%
+
+}
+
+.topTextBook
+{text-align: center;
+margin-bottom: 35px;}
+
+
+  
+@media only screen and (max-width: 1250px) {
+    .bookImageBox
+    {max-width: 800px !important;}
+  }
+  .viewSeriesBtn
+  {background-color: black;}
+  .viewSeriesBtn:hover
+  {background-color: black;
+opacity: 0.7;}
