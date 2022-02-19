@@ -113,7 +113,7 @@ export const SampleCollection2: AudioCollection = {
   audioSeries: [
     {
       id: "1",
-      name: "The First Series",
+      name: "The First Second Series",
       description: "The first series",
       image:
         "https://images.unsplash.com/photo-1532012197267-da84d127e765?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8Ym9va3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",

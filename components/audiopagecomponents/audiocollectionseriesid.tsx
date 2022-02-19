@@ -8,6 +8,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import styles from "../../styles/audio.module.css"
 import { SampleCollection1 } from "../../data/audio/sample"
+import MusicPlayer from "./musicplayer"
 
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -16,60 +17,65 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ReactAudioPlayer from 'react-audio-player';
 import CardActions from '@mui/material/CardActions';
-
+import { getaudioCollectionagainstaSeriesId } from "../../services/getaudiocollection"
 interface Props {
     seriesId: any
+    collectionId: any
 }
+
 
 
 export default function AudioCollectionSeriesIdSearch(props: Props) {
     const [checked, setChecked] = React.useState([1]);
+    var [musicPlayerInfo, setmusicPlayerInfo] = React.useState({ "description": "No Music Selected", "name": "No Playlist Selected", "music": "", "image": " " })
 
 
     return (
         <>
             <Box >
+                <Box style={{ "marginTop": "50px", "marginLeft": "50px", "marginBottom": "30px" }}> <MusicPlayer audioMusic={musicPlayerInfo.music} description={musicPlayerInfo.description} name={musicPlayerInfo.name} image={musicPlayerInfo.image} /></Box>
 
 
-                {SampleCollection1.audioSeries.map((row) => {
-                    return (
-                        <List sx={{ width: '100%', bgcolor: 'background.paper' }} key={row.id}>
-                            {row.episodes.length > 0 && row.id == props.seriesId ? row.episodes.map((value) => {
-                                const labelId = `checkbox-list-secondary-label-${value}`;
-                                return (
-                                    <ListItem
-                                        className="audio-class"
-                                        key={value.id}
 
-                                        disablePadding
-                                    >
-                                        <ListItemButton className={styles.audioSeriesandaudioPlayer}>
-                                            <ListItemAvatar>
-                                                <Avatar
-                                                    alt={`Avatar`}
-                                                    src={value.image}
-                                                />
-                                            </ListItemAvatar>
-                                            <Typography>{value.name}<br></br><Box style={{ "fontSize": "11px" }}>{value.description}</Box></Typography >
-                                            <ReactAudioPlayer
-                                                src={value.audio}
 
-                                                className={styles.audioPlayer}
+                <List sx={{ width: '100%', bgcolor: 'background.paper' }} >
+                    {getaudioCollectionagainstaSeriesId(props.collectionId, props.seriesId).map((value) => {
+                        const labelId = `checkbox-list-secondary-label-${value}`;
+                        return (
+                            <ListItem
+                                className="audio-class"
+                                key={value.id}
 
-                                                controls
-                                            />
-                                        </ListItemButton>
+                                disablePadding
+                                onClick={() => {
+                                    console.log("Clicked")
 
-                                    </ListItem>
-                                );
-                            }) :
-                                null
 
-                            }
-                        </List>
+                                    setmusicPlayerInfo({ "description": value.description, "name": value.name, "music": value.audio, "image": value.image })
+                                    console.log(value.audio)
 
-                    )
-                })}
+                                }}
+                            >
+                                <ListItemButton className={styles.audioSeriesandaudioPlayer}>
+                                    <ListItemAvatar>
+                                        <Avatar
+                                            alt={`Avatar`}
+                                            src={value.image}
+                                        />
+                                    </ListItemAvatar>
+                                    <Typography>{value.name}<br></br><Box style={{ "fontSize": "11px" }}>{value.description}</Box></Typography >
+
+                                </ListItemButton>
+
+                            </ListItem>
+                        );
+                    })}
+
+
+                </List>
+
+
+
             </Box >
 
 

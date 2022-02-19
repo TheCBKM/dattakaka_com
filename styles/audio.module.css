@@ -58,7 +58,8 @@ margin-left:5px}
   }
 
   .mainCollectionBox
-  {padding:50px 20% 50px 20%}
+  {padding:50px 10% 50px 10%;
+  }
   .playList
   {
   justify-content: center
@@ -81,7 +82,21 @@ margin-left:5px}
   .noAudioText
   {text-align: center;}
 
+
+  .collectionsMainHeadingText
+  {margin-top:50px;
+  width:100%;
+text-align:center}
 /* Responsiveness for the audioplayer */ 
 
 
 
+.linkBtnDesign
+{background:black;
+color:white;
+margin-top:20px}
+.linkBtnDesign:hover
+{background:black;
+opacity: 0.7;}
+.mainBoxContainer
+{background: grey;}

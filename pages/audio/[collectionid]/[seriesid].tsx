@@ -15,7 +15,7 @@ const AudioCollectionSeries = () => {
 
     return (
 
-        <div><AudioCollectionId seriesId={seriesid} /></div>
+        <div><AudioCollectionId seriesId={seriesid} collectionId={collectionid} /></div>
 
     )
 }

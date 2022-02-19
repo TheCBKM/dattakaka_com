@@ -16,10 +16,13 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ReactAudioPlayer from 'react-audio-player';
 import CardActions from '@mui/material/CardActions';
+import { getSingleAudioSeries } from "../../services/getaudioseries"
 
+interface Props {
+    seriesId: any
+}
 
-
-export default function AudioCollectionIdSearch() {
+export default function AudioCollectionIdSearch(props: Props) {
     const [checked, setChecked] = React.useState([1]);
 
 
@@ -28,7 +31,7 @@ export default function AudioCollectionIdSearch() {
             <Box className={styles.mainAudiPageBox} >
 
 
-                {SampleCollection1.audioSeries.map((row) => {
+                {getSingleAudioSeries(props.seriesId).map((row) => {
                     return (<Card className={styles.audioSeriesCard} key={row.id} >
                         <CardMedia
                             component="img"
@@ -46,7 +49,7 @@ export default function AudioCollectionIdSearch() {
                             </Typography>
                         </CardContent>
                         <CardActions className={styles.playList} >
-                            <List className={styles.audiPlayerMainBox} sx={{ width: '100%', bgcolor: 'background.paper' }} >
+                            {/* <List className={styles.audiPlayerMainBox} sx={{ width: '100%', bgcolor: 'background.paper' }} >
                                 {row.episodes.length > 0 ? row.episodes.map((value) => {
                                     const labelId = `checkbox-list-secondary-label-${value}`;
                                     return (
@@ -81,7 +84,7 @@ export default function AudioCollectionIdSearch() {
                                     <Typography variant="h5" className={styles.noAudioText}>No Audio Exist</Typography>
 
                                 }
-                            </List>
+                            </List> */}
 
                         </CardActions>
                     </Card>)

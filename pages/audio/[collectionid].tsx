@@ -12,7 +12,7 @@ const CollectionIdresults = () => {
 
 
     return (
-        collectionid == "1" ? <div><AudioCollectionId /></div> : <div>NoHello</div>
+        <div><AudioCollectionId seriesId={collectionid} /></div>
 
     )
 }

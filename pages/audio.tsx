@@ -1,5 +1,5 @@
 import * as React from 'react'
-import AudioSeriesCards from "../components/audiopagecomponents/audioseries"
+import AudioSeriesCards from "../components/audiopagecomponents/audio"
 import { useRouter } from 'next/router'
 
 const audiopage = () => {
