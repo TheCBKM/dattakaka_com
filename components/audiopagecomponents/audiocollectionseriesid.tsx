@@ -52,7 +52,7 @@ export default function AudioCollectionSeriesIdSearch(props: Props) {
     return (
         <>
             <Box >
-                <Box style={{ "marginTop": "50px", "marginLeft": "50px", "marginBottom": "30px" }}> <MusicPlayer audioMusic={musicPlayerInfo.music} description={musicPlayerInfo.description} name={musicPlayerInfo.name} image={musicPlayerInfo.image} changeMusic={setCurrentMusicIndex} /></Box>
+                <Box style={{ "marginTop": "50px", "marginBottom": "30px" }}> <MusicPlayer audioMusic={musicPlayerInfo.music} description={musicPlayerInfo.description} name={musicPlayerInfo.name} image={musicPlayerInfo.image} changeMusic={setCurrentMusicIndex} /></Box>
 
 
 

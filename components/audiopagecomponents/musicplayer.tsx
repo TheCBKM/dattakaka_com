@@ -34,7 +34,11 @@ export default function App(props: Props) {
 
             <Card
                 style={{
-                    width: 400,
+                    width: 550,
+                    marginLeft: "auto",
+                    marginRight: "auto",
+
+
                     display: "flex",
                     backgroundColor: "whitesmoke",
                     boxShadow: "4px 4px 4px gray",
