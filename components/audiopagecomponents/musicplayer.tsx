@@ -7,8 +7,13 @@ import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import CardMedia from "@material-ui/core/CardMedia";
 import PlayArrowIcon from "@material-ui/icons/PlayArrow";
+import styles from "../../styles/audio.module.css"
+
+import Box from '@mui/material/Box';
+
 import Card from "@material-ui/core/Card";
 import ReactAudioPlayer from 'react-audio-player';
+
 
 
 interface Props {
@@ -16,6 +21,7 @@ interface Props {
     description: string
     name: string
     image: string
+    changeMusic: Function
 }
 
 
@@ -51,15 +57,31 @@ export default function App(props: Props) {
                         <Typography variant="subtitle1" color="textSecondary">
                             {props.description}
                         </Typography>
-                        <ReactAudioPlayer
-                            style={{ "display": "inline-block" }}
-                            src={props.audioMusic}
-                            preload="metadata"
+                        <Box className={styles.audioPlayerBox}>
+                            <SkipPreviousIcon className={styles.previousBtn} onClick={() => {
+                                props.changeMusic("previous")
+                            }} />
+
+
+                            <ReactAudioPlayer
+                                style={{ "display": "inline-block" }}
+                                src={props.audioMusic}
+                                preload="metadata"
 
 
 
-                            controls
-                        />
+                                controls
+                            />
+
+                            <SkipNextIcon className={styles.nextBtn}
+
+                                onClick={() => {
+                                    props.changeMusic("next")
+                                }}
+                            />
+
+                        </Box>
+
                     </CardContent>
                     <div
                         style={{

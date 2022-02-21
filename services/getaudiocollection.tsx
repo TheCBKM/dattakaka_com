@@ -44,8 +44,7 @@ export function getaudioCollectionagainstaSeriesId(audiocollectionid: string, se
         for (var i = 0; i < SampleCollection1.audioSeries.length; i++) {
 
             if (SampleCollection1.audioSeries[i].id === seriesId) {
-                console.log("audio 1 cond ")
-                console.log(SampleCollection1.audioSeries[i])
+
 
                 for (var j = 0; j < SampleCollection1.audioSeries[i].episodes.length; j++) { audioSeries.push(SampleCollection1.audioSeries[i].episodes[j]) }
             }

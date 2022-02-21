@@ -100,3 +100,10 @@ margin-top:20px}
 opacity: 0.7;}
 .mainBoxContainer
 {background: grey;}
+
+.audioPlayerBox
+{display:flex;
+  margin-top:20px;
+}
+.previousBtn,.nextBtn :hover
+{cursor: pointer;}
