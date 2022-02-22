@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@1,900&family=Poppins:wght@100;200&display=swap');
 .audioCardMain
 {margin:50px 20% 50px 20%;
 
@@ -85,7 +86,16 @@ margin-left:5px}
 
   .collectionsMainHeadingText
   {margin-top:50px;
-  width:100%;
+    font-family: Poppins;
+font-style: normal;
+font-weight: 900;
+font-size: 54px;
+line-height: 80px;
+
+letter-spacing: -0.05em;
+text-transform: uppercase;
+color: #495057;
+width:100%;
 text-align:center}
 /* Responsiveness for the audioplayer */ 
 
@@ -94,12 +104,19 @@ text-align:center}
 .linkBtnDesign
 {background:black;
 color:white;
-margin-top:20px}
+margin-top:20px;
+font-family: Poppins;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 16px;
+padding:5px}
 .linkBtnDesign:hover
 {background:black;
 opacity: 0.7;}
 .mainBoxContainer
-{background: grey;}
+{background: #F8F9FA;
+}
 
 .audioPlayerBox
 {display:flex;
@@ -107,3 +124,16 @@ opacity: 0.7;}
 }
 .previousBtn,.nextBtn :hover
 {cursor: pointer;}
+.audioCardtext
+{font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;}
+  @media only screen and (max-width: 900) {
+    .collectionBoxes
+    {flex-direction: column !important;
+    justify-content: center;
+  align-items: center;}
+ 
+  }

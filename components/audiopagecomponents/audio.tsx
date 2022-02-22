@@ -19,6 +19,7 @@ import CardActions from '@mui/material/CardActions';
 import { styled } from '@mui/material/styles';
 
 import Paper from '@mui/material/Paper';
+
 import Grid from '@mui/material/Grid';
 import { AudioSeries } from "../../data/audio/types"
 
@@ -38,217 +39,163 @@ export default function MediaControlCard() {
 
     return (
         <>
-            <Box sx={{ flexGrow: 1 }} className={styles.mainBoxContainer}>
-                <Typography variant="h3" className={styles.collectionsMainHeadingText}>
-                    All Collections
-                </Typography>
+            <Grid container className={styles.mainBoxContainer}>
+                <Box sx={{ flexGrow: 1 }} >
+                    <Typography variant="h3" className={styles.collectionsMainHeadingText}>
+                        All Collections
+                    </Typography>
 
-                <Grid container spacing={1}>
-                    <Grid item xs={6} md={6}>
+                    <Grid container spacing={1} className={styles.collectionBoxes}>
+                        <Grid item xs={12} md={6}>
 
 
 
-                        <Box className={styles.mainCollectionBox}>
+                            <Box className={styles.mainCollectionBox}>
+                                <Card >
+                                    <CardMedia
+                                        component="img"
+                                        alt="Series Image"
+                                        height="500"
+
+                                        image={SampleCollection1.image}
+                                    />
+                                    <CardContent>
+                                        <Typography gutterBottom variant="h5" component="div" className={styles.audioCardtext}>
+                                            {SampleCollection1.name}
+                                        </Typography>
+                                        <Typography variant="body2" color="text.secondary" className={styles.audioCardtext}>
+                                            {SampleCollection1.description}
+                                        </Typography>
+                                        <Link href="/audio/1" ><Button className={styles.linkBtnDesign} >View More Information</Button></Link >
+                                    </CardContent>
+                                    <CardActions>
+
+                                    </CardActions>
+                                </Card>
+                            </Box>
+                        </Grid>
+                        <Grid item xs={12} md={6}><Box className={styles.mainCollectionBox}>
                             <Card >
                                 <CardMedia
                                     component="img"
                                     alt="Series Image"
                                     height="500"
 
-                                    image={SampleCollection1.image}
+                                    image={SampleCollection2.image}
                                 />
                                 <CardContent>
-                                    <Typography gutterBottom variant="h5" component="div">
-                                        {SampleCollection1.name}
+                                    <Typography gutterBottom variant="h5" component="div" className={styles.audioCardtext}>
+                                        {SampleCollection2.name}
                                     </Typography>
-                                    <Typography variant="body2" color="text.secondary">
-                                        {SampleCollection1.description}
+                                    <Typography variant="body2" color="text.secondary" className={styles.audioCardtext}>
+                                        {SampleCollection2.description}
                                     </Typography>
-                                    <Link href="/audio/1" ><Button className={styles.linkBtnDesign}>View More Information</Button></Link >
+                                    <Link href="/audio/2" ><Button className={styles.linkBtnDesign}>View More Information</Button></Link >
                                 </CardContent>
                                 <CardActions>
 
                                 </CardActions>
                             </Card>
-                        </Box>
+                        </Box></Grid>
+
+
+
                     </Grid>
-                    <Grid item xs={6} md={6}><Box className={styles.mainCollectionBox}>
-                        <Card >
-                            <CardMedia
-                                component="img"
-                                alt="Series Image"
-                                height="500"
-
-                                image={SampleCollection2.image}
-                            />
-                            <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    {SampleCollection2.name}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {SampleCollection2.description}
-                                </Typography>
-                                <Link href="/audio/2" ><Button className={styles.linkBtnDesign}>View More Information</Button></Link >
-                            </CardContent>
-                            <CardActions>
-
-                            </CardActions>
-                        </Card>
-                    </Box></Grid>
-
-
-                    {/* {SampleCollection1.audioSeries.map((row) => {
-                    return (<Card className={styles.audioSeriesCard} key={row.id} >
-                        <CardMedia
-                            component="img"
-                            alt="green iguana"
-                            height="300"
-                            image={row.image}
-                        />
-                        <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
-                                {row.name}
-
-                            </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {row.description}
-                            </Typography>
-                        </CardContent>
-                        <CardActions className={styles.playList} >
-                            <List className={styles.audiPlayerMainBox} sx={{ width: '100%', bgcolor: 'background.paper' }} >
-                                {row.episodes.length > 0 ? row.episodes.map((value) => {
-                                    const labelId = `checkbox-list-secondary-label-${value}`;
-                                    return (
-                                        <ListItem
-                                            className="audio-class"
-
-
-                                            key={value.id}
-
-                                            disablePadding
-                                        >
-                                            <ListItemButton className={styles.audioSeriesandaudioPlayer}>
-                                                <ListItemAvatar>
-                                                    <Avatar
-                                                        alt={`Avatar`}
-                                                        src={value.image}
-                                                    />
-                                                </ListItemAvatar>
-                                                <Typography>{value.name}<br></br><Box style={{ "fontSize": "11px" }}>{value.description}</Box></Typography >
-                                                <ReactAudioPlayer
-                                                    src={value.audio}
-
-                                                    className={styles.audioPlayer}
-
-                                                    controls
-                                                />
-                                            </ListItemButton>
-
-                                        </ListItem>
-                                    );
-                                }) :
-                                    <Typography variant="h5" className={styles.noAudioText}>No Audio Exist</Typography>
-
-                                }
-                            </List>
-
-                        </CardActions>
-                    </Card>)
-                })} */}
-                </Grid>
-            </Box >
-
-
-            <Box sx={{ flexGrow: 1 }} className={styles.mainBoxContainer}>
-                <Typography variant="h3" className={styles.collectionsMainHeadingText}>
-                    Featured Audio Series
-                </Typography>
-
-                <Grid container spacing={1}>
-                    {getaudioSeries(1).map((value) => {
-                        return (<Grid item xs={6} md={6}>
+                </Box >
 
 
 
-                            <Box className={styles.mainCollectionBox}>
-                                <Card >
-                                    <CardMedia
-                                        component="img"
-                                        alt="Series Image"
-                                        height="500"
+                <Box sx={{ flexGrow: 1 }} >
+                    <Typography variant="h3" className={styles.collectionsMainHeadingText}>
+                        Featured Audio Series
+                    </Typography>
 
-                                        image={value.image}
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            {value.name}
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            {value.description}
-                                        </Typography>
-                                        <Link href={{
-                                            pathname: `/audio/${value.audioCollectionId}/${value.id}`,
-
-                                        }} ><Button className={styles.linkBtnDesign}>View More Information</Button></Link >
-                                    </CardContent>
-                                    <CardActions>
-
-                                    </CardActions>
-                                </Card>
-                            </Box>
-                        </Grid>)
-                    })}
+                    <Grid container spacing={1} className={styles.collectionBoxes}>
+                        {getaudioSeries(1).map((value) => {
+                            return (<Grid item xs={12} md={6} >
 
 
 
-                </Grid>
-            </Box >
+                                <Box className={styles.mainCollectionBox}>
+                                    <Card >
+                                        <CardMedia
+                                            component="img"
+                                            alt="Series Image"
+                                            height="500"
 
+                                            image={value.image}
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="div" className={styles.audioCardtext}>
+                                                {value.name}
+                                            </Typography>
+                                            <Typography variant="body2" color="text.secondary" className={styles.audioCardtext}>
+                                                {value.description}
+                                            </Typography>
+                                            <Link href={{
+                                                pathname: `/audio/${value.audioCollectionId}/${value.id}`,
 
-            <Box sx={{ flexGrow: 1 }} className={styles.mainBoxContainer}>
-                <Typography variant="h3" className={styles.collectionsMainHeadingText}>
-                    Featured Audio Collection
-                </Typography>
+                                            }} ><Button className={styles.linkBtnDesign}>View More Information</Button></Link >
+                                        </CardContent>
+                                        <CardActions>
 
-                <Grid container spacing={1}>
-                    {getaudioCollection(1).map((value) => {
-                        return (<Grid item xs={6} md={6}>
-
-
-
-                            <Box className={styles.mainCollectionBox}>
-                                <Card >
-                                    <CardMedia
-                                        component="img"
-                                        alt="Series Image"
-                                        height="500"
-
-                                        image={value.image}
-                                    />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            {value.name}
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            {value.description}
-                                        </Typography>
-                                    </CardContent>
-                                    <CardActions>
-                                        <Link href={{
-                                            pathname: `/audio/${value.audioCollectionId}/${value.id}`,
-
-                                        }} ><Button className={styles.linkBtnDesign}>View More Information</Button></Link >
-
-                                    </CardActions>
-                                </Card>
-                            </Box>
-                        </Grid>)
-                    })}
+                                        </CardActions>
+                                    </Card>
+                                </Box>
+                            </Grid>)
+                        })}
 
 
 
-                </Grid>
-            </Box >
+                    </Grid>
+                </Box >
+
+
+                <Box sx={{ flexGrow: 1 }} >
+                    <Typography variant="h3" className={styles.collectionsMainHeadingText}>
+                        Featured Audio Collection
+                    </Typography>
+
+                    <Grid container className={styles.collectionBoxes} spacing={1}>
+                        {getaudioCollection(1).map((value) => {
+                            return (<Grid item xs={12} md={6} >
+
+
+
+                                <Box className={styles.mainCollectionBox}>
+                                    <Card >
+                                        <CardMedia
+                                            component="img"
+                                            alt="Series Image"
+                                            height="500"
+
+                                            image={value.image}
+                                        />
+                                        <CardContent>
+                                            <Typography gutterBottom variant="h5" component="div">
+                                                {value.name}
+                                            </Typography>
+                                            <Typography variant="body2" color="text.secondary">
+                                                {value.description}
+                                            </Typography>
+                                        </CardContent>
+                                        <CardActions>
+                                            <Link href={{
+                                                pathname: `/audio/${value.audioCollectionId}/${value.id}`,
+
+                                            }} ><Button className={styles.linkBtnDesign}>View More Information</Button></Link >
+
+                                        </CardActions>
+                                    </Card>
+                                </Box>
+                            </Grid>)
+                        })}
+
+
+
+                    </Grid>
+                </Box >
+            </Grid >
 
 
         </>
