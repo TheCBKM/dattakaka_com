@@ -70,18 +70,19 @@ export default function AudioCollectionSeriesIdSearch(props: Props) {
     return (
         <>
             <Box >
-                <Box style={{ "marginTop": "50px", "marginBottom": "30px" }}> <MusicPlayer audioMusic={musicPlayerInfo.music} description={musicPlayerInfo.description} name={musicPlayerInfo.name} image={musicPlayerInfo.image} changeMusic={setCurrentMusicIndex} /></Box>
+                <Box className={styles.audioPlayerContainer} > <MusicPlayer audioMusic={musicPlayerInfo.music} description={musicPlayerInfo.description} name={musicPlayerInfo.name} image={musicPlayerInfo.image} changeMusic={setCurrentMusicIndex} /></Box>
 
 
 
 
-                <List sx={{ width: '100%', bgcolor: 'background.paper' }} >
+                <List sx={{ bgcolor: 'background.paper' }} className={styles.audioPlayListContainer}>
                     {getaudioCollectionagainstaSeriesId(props.collectionId, props.seriesId).map((value) => {
                         const labelId = `checkbox-list-secondary-label-${value}`;
                         return (
                             <ListItem
                                 className="audio-class"
                                 key={value.id}
+                                style={{ "width": "50%" }}
 
                                 disablePadding
                                 onClick={() => {

@@ -33,16 +33,8 @@ export default function App(props: Props) {
 
 
             <Card
-                style={{
-                    width: 550,
-                    marginLeft: "auto",
-                    marginRight: "auto",
 
-
-                    display: "flex",
-                    backgroundColor: "whitesmoke",
-                    boxShadow: "4px 4px 4px gray",
-                }}
+                className={styles.musicPlayerControls}
             >
                 <div
                     style={{
@@ -71,6 +63,7 @@ export default function App(props: Props) {
                                 style={{ "display": "inline-block" }}
                                 src={props.audioMusic}
                                 preload="metadata"
+                                className={styles.playMusicBox}
 
 
 
@@ -102,6 +95,7 @@ export default function App(props: Props) {
                     style={{
                         width: 151,
                     }}
+                    className={styles.musicPlayerImage}
                     image={props.image}
 
                 />

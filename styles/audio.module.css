@@ -124,6 +124,10 @@ opacity: 0.7;}
 }
 .previousBtn,.nextBtn :hover
 {cursor: pointer;}
+.previousBtn,.nextBtn
+{height:20px;
+width:20px;
+margin:0 10px 0 10px}
 .audioCardtext
 {font-family: Poppins;
   font-style: normal;
@@ -137,3 +141,40 @@ opacity: 0.7;}
   align-items: center;}
  
   }
+  .audioPlayListContainer
+  {width: 100%;
+    }
+    .audioPlayListContainer li
+    {width:50%;
+    margin-left:auto;
+    margin-right:auto;}
+
+    .audioPlayerContainer
+    { margin-top: 50px;
+       margin-bottom: 30px }
+
+       @media only screen and (max-width: 700px) {
+ .musicPlayerControls
+ {width:85% !important}
+ .playMusicBox
+ {width:100% !important}
+
+ .musicPlayerControls
+ {flex-direction: column;}
+ .musicPlayerImage
+ {height:250px !important;
+  width: 100% !important;
+}
+       }
+
+       .musicPlayerControls
+      {
+        width: 550px;
+        margin-left: auto;
+        margin-right: auto;
+
+
+        display: flex;
+        background: whitesmoke;
+        box-shadow: 4px 4px 4px gray
+    }
