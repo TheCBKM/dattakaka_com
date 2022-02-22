@@ -37,8 +37,7 @@ export function getaudioCollection(audiocollectionid: number): AudioEpisode[] {
 
 export function getaudioCollectionagainstaSeriesId(audiocollectionid: string, seriesId: string): AudioEpisode[] {
     var audioSeries: AudioEpisode[] = []
-    console.log("tHE AUDIO COLLECTION IS", audiocollectionid)
-    console.log("The series id is", seriesId)
+
     if (audiocollectionid == "1") {
 
         for (var i = 0; i < SampleCollection1.audioSeries.length; i++) {
@@ -56,7 +55,7 @@ export function getaudioCollectionagainstaSeriesId(audiocollectionid: string, se
 
 
             if (SampleCollection2.audioSeries[i].id === seriesId) {
-                console.log("audio 2 cond ")
+
 
                 for (var j = 0; j < SampleCollection2.audioSeries[i].episodes.length; j++) { audioSeries.push(SampleCollection2.audioSeries[i].episodes[j]) }
             }

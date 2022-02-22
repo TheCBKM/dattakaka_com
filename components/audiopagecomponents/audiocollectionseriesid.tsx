@@ -27,24 +27,42 @@ interface Props {
 
 export default function AudioCollectionSeriesIdSearch(props: Props) {
     const [checked, setChecked] = React.useState([1]);
-    const [currentMusic, setcurrentMusic] = React.useState(-1);
+    var [currentMusic, setcurrentMusic] = React.useState(-1);
     var [musicPlayerInfo, setmusicPlayerInfo] = React.useState({ "description": "No Music Selected", "name": "No Playlist Selected", "music": "", "image": " " })
+    var [musicPlayerInfoRecord, setmusicPlayerInfoRecord] = React.useState<any>({ "description": "No Music Selected", "name": "No Playlist Selected", "music": "", "image": " " })
 
     function setCurrentMusicIndex(record: any) {
         var value: any = getaudioCollectionagainstaSeriesId(props.collectionId, props.seriesId);
+        setmusicPlayerInfoRecord(value)
         if (record === "previous" && currentMusic === -1) {
-            React.useState({ "description": "No Music Here Click Next", "name": "No Music Here", "music": "", "image": " " })
+            setmusicPlayerInfo({ "description": "No Music Here Click Next", "name": "No Music Here", "music": "", "image": " " });
+
+
+            return;
+
         }
-        else if (record === "next" && value.length === currentMusic) { React.useState({ "description": "No Music Here Go Back", "name": "No Music Here", "music": "", "image": " " }) }
-        else if (record === "next") { setcurrentMusic(currentMusic + 1) }
+        else if (record === "next" && musicPlayerInfoRecord.length === currentMusic + 1) {
+            setmusicPlayerInfo({ "description": "No Music Here Go Back", "name": "No Music Here", "music": "", "image": " " });
+            return;
+        }
+        else if (record === "next") {
+            currentMusic = currentMusic + 1
+            setcurrentMusic(currentMusic)
+        }
         else if (record === "previous") {
-            if (currentMusic != -1) { setcurrentMusic(currentMusic - 1) }
-            else { setcurrentMusic(currentMusic + 1) }
+            console.log("in the previous")
+            if (currentMusic != -1) {
+                setcurrentMusic(currentMusic - 1)
+            }
+            else {
+                setcurrentMusic(currentMusic + 1)
+            }
         }
 
+
+
         setmusicPlayerInfo({ "description": value[currentMusic].description, "name": value[currentMusic].name, "music": value[currentMusic].audio, "image": value[currentMusic].image })
-        if (currentMusic === value.length) { console.log("hey") }
-        setcurrentMusic(currentMusic + 1)
+
 
 
 
@@ -92,6 +110,7 @@ export default function AudioCollectionSeriesIdSearch(props: Props) {
 
 
                 </List>
+
 
 
 
