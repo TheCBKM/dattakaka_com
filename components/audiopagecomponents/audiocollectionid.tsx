@@ -40,11 +40,11 @@ export default function AudioCollectionIdSearch(props: Props) {
                             image={row.image}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography className={styles.audioCardtext} gutterBottom variant="h5" component="div">
                                 {row.name}
 
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography className={styles.audioCardtext} variant="body2" color="text.secondary">
                                 {row.description}
                             </Typography>
                         </CardContent>

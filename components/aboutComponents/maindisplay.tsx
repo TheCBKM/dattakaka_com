@@ -27,10 +27,10 @@ export default function MediaControlCard() {
                 />
                 <Box sx={{ display: 'flex', flexDirection: 'column' }} className={styles.textBox}>
                     <CardContent sx={{ flex: '1 0 auto' }}>
-                        <Typography variant="h4">
+                        <Typography variant="h4" className={styles.aboutHeading}>
                             Happiness through Ram-Nam
                         </Typography>
-                        <Typography color="text.secondary" component="div">
+                        <Typography color="text.secondary" component="div" className={styles.fontFamilyAbout}>
                             Being happy is the ultimate value of a living human. A human being’s every action is meant towards making oneself happy. There are people who not only achieve ultimate happiness in their lives but they help others live a happy, frictionless, smooth life. These human beings are called ‘Saints’. Since they know the path to reach the peak of happiness; they have a right and authority to help others come to that peak.
 
 

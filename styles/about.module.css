@@ -33,7 +33,35 @@
   content: "\a \a ";
     white-space: pre;
 }
+.lineBreak , .fontFamilyAbout
+{font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 36px;
+  
+  color: #6C757D;
+  }
 
+  .aboutHeading
+  {font-family: Poppins;
+font-style: normal;
+font-weight: 900;
+font-size: 50px;
+line-height: 50px;
+/* or 98% */
+
+text-align: center;
+letter-spacing: -0.05em;
+text-transform: uppercase;
+
+/* Gray */
+
+color: #495057;
+
+
+
+  }
 
     .image
     {width:50% !important}
