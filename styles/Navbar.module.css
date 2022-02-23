@@ -1,4 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@1,900&family=Poppins:wght@100;200&display=swap');
+
 .typographyColor{
-   
+/* Menu/ 16px Bold */
+
+font-family: Poppins !important;
+font-style: normal !important;
+font-weight: bold !important;
+font-size: 16px !important;
+line-height: 24px !important;
+/* identical to box height */
+
+
+color: #495057 !important;
 
 }
+.navItems
+{font-family: Poppins !important;
+font-style: normal !important;
+font-weight: normal !important;
+font-size: 16px !important;
+line-height: 24px !important;
+/* identical to box height */
+
+
+/* Gray */
+
+color: #495057;}
+.navItemsContainer
+{justify-content: center;}

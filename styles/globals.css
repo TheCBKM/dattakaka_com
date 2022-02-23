@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@1,900&family=Poppins:wght@100;200&display=swap');
 
 html,
 body {
@@ -19,8 +20,20 @@ a {
 
 /* footer */
 .footer-content
-{display:flex;
-justify-content: center;
+{font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  /* or 68% */
+  
+  text-align: center;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  
+  /* Gray */
+  
+  color: #495057;
 
 }
 @media only screen and (max-width: 650px) {
@@ -46,7 +59,21 @@ justify-content: center;
 }
 .audio-class .css-518kzi-MuiListItemSecondaryAction-root
 {left:70% !important}
-
+.brand-name
+{font-family: Poppins;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 50px;
+  /* or 98% */
+  
+  text-align: center;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  
+  /* Gray */
+  
+  color: #495057;}
 
 
 

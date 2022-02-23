@@ -84,20 +84,20 @@ const ResponsiveAppBar = () => {
               }}
             >
 
-              <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
+              <MenuItem onClick={handleCloseNavMenu} className={styles.navItems}>
                 <Typography textAlign="center"><Link href="/audio">Audios</Link></Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
+              <MenuItem onClick={handleCloseNavMenu} className={styles.navItems}>
                 <Link href="/"><a>Home</a></Link>
               </MenuItem>
 
-              <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
+              <MenuItem onClick={handleCloseNavMenu} className={styles.navItems}>
                 <Typography textAlign="center">Videos</Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
+              <MenuItem onClick={handleCloseNavMenu} className={styles.navItems}>
                 <Typography textAlign="center"><Link href="/about">About</Link></Typography>
               </MenuItem>
-              <MenuItem onClick={handleCloseNavMenu} className={styles.typographyColor}>
+              <MenuItem onClick={handleCloseNavMenu} className={styles.navItems}>
                 <Typography textAlign="center">Gallery</Typography>
               </MenuItem>
 
@@ -112,14 +112,14 @@ const ResponsiveAppBar = () => {
           >
             DATTAKAKA.COM
           </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+          <Box className={styles.navItemsContainer} sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
 
 
             <Button
 
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'black', display: 'block' }}
-            >
+              className={styles.navItems}>
               <Link href="/audio">Audios</Link>
 
 
@@ -130,7 +130,7 @@ const ResponsiveAppBar = () => {
 
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'black', display: 'block' }}
-            >
+              className={styles.navItems}>
               <Link href="/">Home</Link>
 
             </Button>
@@ -138,7 +138,7 @@ const ResponsiveAppBar = () => {
 
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'black', display: 'block' }}
-            >
+              className={styles.navItems}>
               Videos
 
             </Button>
@@ -147,7 +147,7 @@ const ResponsiveAppBar = () => {
 
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'black', display: 'block' }}
-            >
+              className={styles.navItems}>
               <Link href="/about">About</Link>
 
             </Button>
@@ -155,7 +155,7 @@ const ResponsiveAppBar = () => {
 
               onClick={handleCloseNavMenu}
               sx={{ my: 2, color: 'black', display: 'block' }}
-            >
+              className={styles.navItems}>
               Gallery
 
             </Button>

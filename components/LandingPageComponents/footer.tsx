@@ -11,7 +11,7 @@ const footer = () => {
 
                 target="_blank"
                 rel="noopener noreferrer"
-                style={{ "fontSize": "2rem", "fontWeight": "300px" }}
+                className="brand-name"
             >
                 DattaKaka.com
                 {/* <span className={styles.logo}>

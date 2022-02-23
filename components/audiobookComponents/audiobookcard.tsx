@@ -27,7 +27,7 @@ export default function MediaControlCard() {
                     <Typography component="div" variant="h5" className={styles.topTextBook}>
                         {SampleCollection1.name}
                     </Typography>
-                    <Typography variant="subtitle1" color="text.secondary" component="div">
+                    <Typography variant="subtitle1" className={styles.descriptionText} color="text.secondary" component="div">
                         {SampleCollection1.description}
                     </Typography>
                     <Button className={styles.viewSeriesBtn} variant="contained"><Link href={"/audio/" + SampleCollection1.id}>View Series</Link></Button>
