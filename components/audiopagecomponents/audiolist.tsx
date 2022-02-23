@@ -21,7 +21,7 @@ export default function CheckboxListSecondary(props: AudioEpisodeComponent) {
     return (
         <List className={styles.audiPlayerMainBox} sx={{ width: '100%', bgcolor: 'background.paper' }} >
             {props.audioList.length > 0 ? props.audioList.map((value) => {
-                const labelId = `checkbox-list-secondary-label-${value}`;
+
                 return (
                     <ListItem
                         className="audio-class"
