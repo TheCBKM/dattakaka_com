@@ -23,7 +23,7 @@ function TestimonialsPage() {
           spacing={2}
           sx={{ justifyContent: "center", padding: 0 }}
         >
-          <Grid item xs={6} md={4}>
+          <Grid item xs={6} md={4} >
             <Item className={styles.GridPadding}>
               <Typography variant="h3">About</Typography>
               <br></br>
@@ -53,7 +53,7 @@ function TestimonialsPage() {
             </Item>
           </Grid>
           <Grid item xs={6} md={4} className={styles.testimonialPaddingClass}>
-            <Item>
+            <Item sx={{ borderRadius: "25px" }}>
               <CardMedia
                 component="img"
                 image="./images/datatakatestimonial.webp"

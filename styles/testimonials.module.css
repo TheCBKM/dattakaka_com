@@ -1,9 +1,9 @@
-.testimonialPaddingClass
-{padding-left:0  !important
-
+.testimonialPaddingClass {
+  padding-left: 0 !important;
 }
 
-.GridPadding
-{padding-top:100px;
-padding-bottom:100px
+.GridPadding {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  border-radius: 25px;
 }
